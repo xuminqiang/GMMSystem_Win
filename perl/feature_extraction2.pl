@@ -20,7 +20,7 @@ $nPatchSize =~ s/_/ /;
 open(FILE, ">feature_extraction2_${nn}_run.m") || die @_;
 print FILE "path(path,\'$codedir\\matlab\')\n";
 if(-e "$ROI_file"){ 
-print FILE "feature_extraction2(\'$scp\',$nn,\'$codedir\',\'$curdir\',$reduction,$reduceDim,$bPatchSift,$bIncludeBlank,$nOx,$nOy,\'$nPatchSize\',\'$LogfileExt\',\'$ROI_file\')\n";
+print FILE "feature_extraction_ROI(\'$scp\',$nn,\'$codedir\',\'$curdir\',$reduction,$reduceDim,$bPatchSift,$bIncludeBlank,$nOx,$nOy,\'$nPatchSize\',\'$LogfileExt\',\'$ROI_file\')\n";
 }else
 {
 print FILE "feature_extraction2(\'$scp\',$nn,\'$codedir\',\'$curdir\',$reduction,$reduceDim,$bPatchSift,$bIncludeBlank,$nOx,$nOy,\'$nPatchSize\',\'$LogfileExt\')\n";
