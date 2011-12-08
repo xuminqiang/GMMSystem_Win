@@ -17,7 +17,7 @@ if ~exist('patchSizes','var')
 end
 
 minPatchNum = 500;
-maxPatchNum = 20000;
+maxPatchNum = 10000;
 
 %% Preprocessing
 
