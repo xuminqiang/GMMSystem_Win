@@ -42,11 +42,13 @@ for(my $i=0; $i<@nlines; $i=$i+1){
 	my $desfea = $tmp[1];
 	
 	system("$codedir\\b\\PreCut2 $srcwav $curdir\\tmpwav");
+	#system("$codedir\\b\\lparam $curdir\\tmpwav $curdir\\tmp5 $curdir/lparam.cfg");
 	system("$codedir\\b\\lparam $curdir\\tmpwav $curdir\\tmp1 $curdir/lparam.cfg");
 	system("$codedir\\b\\lCMS $curdir\\tmp1 $curdir\\tmp2");
 	system("$codedir\\b\\lRASTA $curdir\\tmp2 $curdir\\tmp3");
 	system("$codedir\\b\\Prolongdata $curdir\\tmp3 $curdir\\tmp4 300");
-	system("$codedir\\b\\Fwarping $codedir\\b\\normtable.txt $curdir\\tmp4 $desfea 300");
+	system("$codedir\\b\\Fwarping $codedir\\b\\normtable.txt $curdir\\tmp4 $curdir\\tmp5 300");
+	system("$codedir\\b\\HTKtohtk $curdir\\tmp5 $desfea 0");
 	
 	print FEAT "$desfea\n";
 
