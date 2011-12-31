@@ -38,8 +38,8 @@ test_label = classlabel(ttlabel==2);
 train_imgs = AllImgs(:,ttlabel==1);
 test_imgs = AllImgs(:,ttlabel==2);
 
-wccn_label= classlabel(ttlabel==0);
-wccn_imgs = AllImgs(:,ttlabel==0);
+wccn_label= classlabel(ttlabel==1);
+wccn_imgs = AllImgs(:,ttlabel==1);
 
 clear AllImgs
 

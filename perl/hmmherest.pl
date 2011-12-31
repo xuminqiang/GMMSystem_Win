@@ -299,6 +299,7 @@ while($nmix<=$NUMMIX){
     $lastmix=$nmix;
     if ($nmix<$NUMMIX && $NUMMIX<$nmix*2){$nmix=$NUMMIX;}
     else{$nmix=$nmix*2;}
+	#$nmix=$nmix+1;
      }
 
 my $pmix=$lastmix;
